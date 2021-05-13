@@ -1,0 +1,7 @@
+.vscode/
+
+# SPEC
+data/
+Docs/
+Spec/
+*.bset
