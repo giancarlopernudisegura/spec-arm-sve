@@ -1,0 +1,39 @@
+template class VectorMemory<Vector< double > >;
+ template class GrowingVectorMemory<Vector< double > >;
+
+ 
+ template class VectorMemory<BlockVector< double > >;
+ template class GrowingVectorMemory<BlockVector< double > >;
+ 
+template class VectorMemory<Vector< float > >;
+ template class GrowingVectorMemory<Vector< float > >;
+
+ 
+ template class VectorMemory<BlockVector< float > >;
+ template class GrowingVectorMemory<BlockVector< float > >;
+ 
+template class VectorMemory<Vector< long double > >;
+ template class GrowingVectorMemory<Vector< long double > >;
+
+ 
+ template class VectorMemory<BlockVector< long double > >;
+ template class GrowingVectorMemory<BlockVector< long double > >;
+ 
+template class VectorMemory<Vector< std::complex<double> > >;
+ template class GrowingVectorMemory<Vector< std::complex<double> > >;
+ 
+ template class VectorMemory<BlockVector< std::complex<double> > >;
+ template class GrowingVectorMemory<BlockVector< std::complex<double> > >;
+ 
+template class VectorMemory<Vector< std::complex<float> > >;
+ template class GrowingVectorMemory<Vector< std::complex<float> > >;
+ 
+ template class VectorMemory<BlockVector< std::complex<float> > >;
+ template class GrowingVectorMemory<BlockVector< std::complex<float> > >;
+ 
+template class VectorMemory<Vector< std::complex<long double> > >;
+ template class GrowingVectorMemory<Vector< std::complex<long double> > >;
+ 
+ template class VectorMemory<BlockVector< std::complex<long double> > >;
+ template class GrowingVectorMemory<BlockVector< std::complex<long double> > >;
+ 

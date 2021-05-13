@@ -1,0 +1,8 @@
+template class InterGridMap< Triangulation<deal_II_dimension> >;
+
+template class InterGridMap< DoFHandler<deal_II_dimension> >;
+
+template class InterGridMap< hp::DoFHandler<deal_II_dimension> >;
+
+template class InterGridMap< MGDoFHandler<deal_II_dimension> >;
+

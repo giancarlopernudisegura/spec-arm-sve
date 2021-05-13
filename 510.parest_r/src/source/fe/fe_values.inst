@@ -1,0 +1,1812 @@
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<double> >
+ (const dealii:: Vector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<float> >
+ (const dealii:: Vector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: Vector<long double> >
+ (const dealii:: Vector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<double> >
+ (const dealii:: BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<float> >
+ (const dealii:: BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_values<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_values<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_symmetric_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<SymmetricTensor<2,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_divergences<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_hessians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<3,deal_II_dimension> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension>::get_function_laplacians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension> >&) const;
+
+
+#if deal_II_dimension != 3
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<value_type>&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Scalar<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<double>&) const;
+
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_values<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_symmetric_gradients<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<SymmetricTensor<2,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_divergences<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_hessians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<3,deal_II_dimension+1> >&) const;
+ template
+ void FEValuesViews::Vector<deal_II_dimension, deal_II_dimension+1>
+ ::get_function_laplacians<dealii:: BlockVector<long double> >
+ (const dealii:: BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> >&) const;
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<double> >
+ (const  Vector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<float> >
+ (const  Vector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< Vector<long double> >
+ (const  Vector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<double> >
+ (const  BlockVector<double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<float> >
+ (const  BlockVector<float> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 
+template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<std::vector<Tensor<1,deal_II_dimension> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#if deal_II_dimension != 3
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_values< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<1,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_gradients< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<1,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Tensor<2,deal_II_dimension+1> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_hessians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<Tensor<2,deal_II_dimension+1> > > &, bool) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<float>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<double>&) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&, std::vector<float>&) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<double> > &) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<Vector<float> > &) const;
+
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<double> > &, bool) const;
+ template
+ void FEValuesBase<deal_II_dimension,deal_II_dimension+1>::get_function_laplacians< BlockVector<long double> >
+ (const  BlockVector<long double> &, const VectorSlice<const std::vector<unsigned int> >&,
+ std::vector<std::vector<float> > &, bool) const;
+
+
+#endif
+
+ 

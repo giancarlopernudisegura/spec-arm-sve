@@ -1,0 +1,48 @@
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  Vector<double> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  Vector<double> >;
+
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  Vector<float> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  Vector<float> >;
+
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  Vector<long double> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  Vector<long double> >;
+
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  BlockVector<double> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  BlockVector<double> >;
+
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  BlockVector<float> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  BlockVector<float> >;
+
+template class FEFieldFunction<deal_II_dimension, 
+ DoFHandler<deal_II_dimension>, 
+  BlockVector<long double> >;
+
+ template class FEFieldFunction<deal_II_dimension, 
+ MGDoFHandler<deal_II_dimension>, 
+  BlockVector<long double> >;
+

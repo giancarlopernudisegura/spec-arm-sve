@@ -1,0 +1,810 @@
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<float> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<long double> &) const;
+
+#endif
+
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  Vector<long double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  Vector<long double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  Vector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  Vector<long double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<float> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<float> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<float> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< double >&,  BlockVector<long double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< float >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< float >&,  BlockVector<long double> &) const;
+
+#endif
+ 
+template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<long double> &) const;
+
+#if deal_II_dimension != 3
+
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::get_interpolated_dof_values
+ (const  BlockVector<long double> &, Vector< long double >&) const;
+ template
+ void
+ DoFCellAccessor<hp::DoFHandler<deal_II_dimension,deal_II_dimension+1> >::set_dof_values_by_interpolation
+ (const Vector< long double >&,  BlockVector<long double> &) const;
+
+#endif
+ 

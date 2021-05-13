@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+//    $Id: function_parser.h 14594 2007-03-22 20:17:41Z bangerth $
+//    Version: $Name$
+//
+//    Copyright (C) 2007, 2008 by the deal.II authors
+//
+//    This file is subject to QPL and may not be  distributed
+//    without copyright and license information. Please refer
+//    to the file deal.II/doc/license.html for the  text  and
+//    further information on this license.
+//
+//---------------------------------------------------------------------------
+
+
+for (VECTOR : SERIAL_VECTORS)
+{
+  template class FEFieldFunction<deal_II_dimension, 
+				 DoFHandler<deal_II_dimension>, 
+				 VECTOR>;
+
+  template class FEFieldFunction<deal_II_dimension, 
+				 MGDoFHandler<deal_II_dimension>, 
+				 VECTOR>;
+}

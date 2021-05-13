@@ -1,0 +1,282 @@
+template class Vector< double >;
+ 
+template class Vector< float >;
+ 
+template class Vector< long double >;
+ 
+template
+ bool
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< double >(const Vector< double >&) const;
+ template
+  double 
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< double >(const Vector< double >&) const;
+ template
+ void Vector< double >::reinit< double >(const Vector< double >&, const bool);
+ template
+ void Vector< double >::equ< double >(const  double , const Vector< double >&);
+ template
+ void Vector< double >::scale< double >(const Vector< double >&);
+ 
+template
+ bool
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< float >(const Vector< float >&) const;
+ template
+  double 
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< float >(const Vector< float >&) const;
+ template
+ void Vector< double >::reinit< float >(const Vector< float >&, const bool);
+ template
+ void Vector< double >::equ< float >(const  double , const Vector< float >&);
+ template
+ void Vector< double >::scale< float >(const Vector< float >&);
+ 
+template
+ bool
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< long double >(const Vector< long double >&) const;
+ template
+  double 
+ Vector< double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< long double >(const Vector< long double >&) const;
+ template
+ void Vector< double >::reinit< long double >(const Vector< long double >&, const bool);
+ template
+ void Vector< double >::equ< long double >(const  double , const Vector< long double >&);
+ template
+ void Vector< double >::scale< long double >(const Vector< long double >&);
+ 
+template
+ bool
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< double >(const Vector< double >&) const;
+ template
+  float 
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< double >(const Vector< double >&) const;
+ template
+ void Vector< float >::reinit< double >(const Vector< double >&, const bool);
+ template
+ void Vector< float >::equ< double >(const  float , const Vector< double >&);
+ template
+ void Vector< float >::scale< double >(const Vector< double >&);
+ 
+template
+ bool
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< float >(const Vector< float >&) const;
+ template
+  float 
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< float >(const Vector< float >&) const;
+ template
+ void Vector< float >::reinit< float >(const Vector< float >&, const bool);
+ template
+ void Vector< float >::equ< float >(const  float , const Vector< float >&);
+ template
+ void Vector< float >::scale< float >(const Vector< float >&);
+ 
+template
+ bool
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< long double >(const Vector< long double >&) const;
+ template
+  float 
+ Vector< float >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< long double >(const Vector< long double >&) const;
+ template
+ void Vector< float >::reinit< long double >(const Vector< long double >&, const bool);
+ template
+ void Vector< float >::equ< long double >(const  float , const Vector< long double >&);
+ template
+ void Vector< float >::scale< long double >(const Vector< long double >&);
+ 
+template
+ bool
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< double >(const Vector< double >&) const;
+ template
+  long double 
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< double >(const Vector< double >&) const;
+ template
+ void Vector< long double >::reinit< double >(const Vector< double >&, const bool);
+ template
+ void Vector< long double >::equ< double >(const  long double , const Vector< double >&);
+ template
+ void Vector< long double >::scale< double >(const Vector< double >&);
+ 
+template
+ bool
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< float >(const Vector< float >&) const;
+ template
+  long double 
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< float >(const Vector< float >&) const;
+ template
+ void Vector< long double >::reinit< float >(const Vector< float >&, const bool);
+ template
+ void Vector< long double >::equ< float >(const  long double , const Vector< float >&);
+ template
+ void Vector< long double >::scale< float >(const Vector< float >&);
+ 
+template
+ bool
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< long double >(const Vector< long double >&) const;
+ template
+  long double 
+ Vector< long double >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< long double >(const Vector< long double >&) const;
+ template
+ void Vector< long double >::reinit< long double >(const Vector< long double >&, const bool);
+ template
+ void Vector< long double >::equ< long double >(const  long double , const Vector< long double >&);
+ template
+ void Vector< long double >::scale< long double >(const Vector< long double >&);
+ 
+template class Vector< std::complex<double> >;
+ 
+template class Vector< std::complex<float> >;
+ 
+template class Vector< std::complex<long double> >;
+ 
+template
+ bool
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+  std::complex<double> 
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+ void Vector< std::complex<double> >::reinit< std::complex<double> >(const Vector< std::complex<double> >&, const bool);
+ template
+ void Vector< std::complex<double> >::equ< std::complex<double> >(const  std::complex<double> , const Vector< std::complex<double> >&);
+ template
+ void Vector< std::complex<double> >::scale< std::complex<double> >(const Vector< std::complex<double> >&);
+ 
+template
+ bool
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+  std::complex<double> 
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+ void Vector< std::complex<double> >::reinit< std::complex<float> >(const Vector< std::complex<float> >&, const bool);
+ template
+ void Vector< std::complex<double> >::equ< std::complex<float> >(const  std::complex<double> , const Vector< std::complex<float> >&);
+ template
+ void Vector< std::complex<double> >::scale< std::complex<float> >(const Vector< std::complex<float> >&);
+ 
+template
+ bool
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+  std::complex<double> 
+ Vector< std::complex<double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+ void Vector< std::complex<double> >::reinit< std::complex<long double> >(const Vector< std::complex<long double> >&, const bool);
+ template
+ void Vector< std::complex<double> >::equ< std::complex<long double> >(const  std::complex<double> , const Vector< std::complex<long double> >&);
+ template
+ void Vector< std::complex<double> >::scale< std::complex<long double> >(const Vector< std::complex<long double> >&);
+ 
+template
+ bool
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+  std::complex<float> 
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+ void Vector< std::complex<float> >::reinit< std::complex<double> >(const Vector< std::complex<double> >&, const bool);
+ template
+ void Vector< std::complex<float> >::equ< std::complex<double> >(const  std::complex<float> , const Vector< std::complex<double> >&);
+ template
+ void Vector< std::complex<float> >::scale< std::complex<double> >(const Vector< std::complex<double> >&);
+ 
+template
+ bool
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+  std::complex<float> 
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+ void Vector< std::complex<float> >::reinit< std::complex<float> >(const Vector< std::complex<float> >&, const bool);
+ template
+ void Vector< std::complex<float> >::equ< std::complex<float> >(const  std::complex<float> , const Vector< std::complex<float> >&);
+ template
+ void Vector< std::complex<float> >::scale< std::complex<float> >(const Vector< std::complex<float> >&);
+ 
+template
+ bool
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+  std::complex<float> 
+ Vector< std::complex<float> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+ void Vector< std::complex<float> >::reinit< std::complex<long double> >(const Vector< std::complex<long double> >&, const bool);
+ template
+ void Vector< std::complex<float> >::equ< std::complex<long double> >(const  std::complex<float> , const Vector< std::complex<long double> >&);
+ template
+ void Vector< std::complex<float> >::scale< std::complex<long double> >(const Vector< std::complex<long double> >&);
+ 
+template
+ bool
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+  std::complex<long double> 
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<double> >(const Vector< std::complex<double> >&) const;
+ template
+ void Vector< std::complex<long double> >::reinit< std::complex<double> >(const Vector< std::complex<double> >&, const bool);
+ template
+ void Vector< std::complex<long double> >::equ< std::complex<double> >(const  std::complex<long double> , const Vector< std::complex<double> >&);
+ template
+ void Vector< std::complex<long double> >::scale< std::complex<double> >(const Vector< std::complex<double> >&);
+ 
+template
+ bool
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+  std::complex<long double> 
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<float> >(const Vector< std::complex<float> >&) const;
+ template
+ void Vector< std::complex<long double> >::reinit< std::complex<float> >(const Vector< std::complex<float> >&, const bool);
+ template
+ void Vector< std::complex<long double> >::equ< std::complex<float> >(const  std::complex<long double> , const Vector< std::complex<float> >&);
+ template
+ void Vector< std::complex<long double> >::scale< std::complex<float> >(const Vector< std::complex<float> >&);
+ 
+template
+ bool
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator==< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+  std::complex<long double> 
+ Vector< std::complex<long double> >::DEAL_II_MEMBER_OP_TEMPLATE_INST
+ operator*< std::complex<long double> >(const Vector< std::complex<long double> >&) const;
+ template
+ void Vector< std::complex<long double> >::reinit< std::complex<long double> >(const Vector< std::complex<long double> >&, const bool);
+ template
+ void Vector< std::complex<long double> >::equ< std::complex<long double> >(const  std::complex<long double> , const Vector< std::complex<long double> >&);
+ template
+ void Vector< std::complex<long double> >::scale< std::complex<long double> >(const Vector< std::complex<long double> >&);
+ 
