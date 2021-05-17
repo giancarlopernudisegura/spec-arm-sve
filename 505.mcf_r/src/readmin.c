@@ -23,6 +23,15 @@ Copyright (c) 2006-2010 LBW.
 
 #include "readmin.h"
 
+#include <stdint.h>
+void svprint(svbool_t pg, svuint64_t data) {
+  uint64_t buffer[2048];
+  svst1_u64(pg, buffer, data);
+  for (uint8_t i = 0; i < svcntd(); i++) {
+    printf("element:\t%d\n", buffer[i]);
+  }
+}
+
 #ifdef _PROTO_
 LONG read_min( network_t *net )
 #else
@@ -30,6 +39,7 @@ LONG read_min( net )
      network_t *net;
 #endif
 {                                       
+    printf("test\n");
     FILE *in = NULL;
     char instring[201];
     LONG t, h, c;
@@ -225,7 +235,8 @@ LONG read_min( net )
     net->clustfile[0] = (char)0;
     i = 1;
     svbool_t pg = svwhilele_b64_s64(i, net->n_trips);
-    while(svptest_first(pg, pg))
+    printf("before loop\n");
+    while (svptest_first(pg, pg))
     {
       svuint64_t _actArc = svdup_u64(3 * i - 1);
       svuint64_t result, akt_group;
@@ -259,6 +270,7 @@ LONG read_min( net )
       svuint64_t arc_org_cost_ptrs = svadd_n_u64_z(pg,
         sv_arc,
         offsetof(arc_t, org_cost));
+      svprint(pg, sv_arc);
       cost_t m = (cost_t)((-2) * (MAX(net->bigM, (LONG)BIGM)));
       svuint64_t sv_max = svdup_u64(m);
       svst1_scatter_u64base_u64(pg, arc_cost_ptrs, sv_max);
