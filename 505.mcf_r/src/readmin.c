@@ -21,11 +21,14 @@ Copyright (c) 2006-2010 LBW.
 
 #include "readmin.h"
 
-void svprint(svbool_t pg, svuint64_t data) {
-  uint64_t b[2048];
-  uint64_t *buffer = b;
+void svprint(svbool_t pg, long index, long max, svuint64_t data) {
+  uint64_t buffer[2048];
   svst1_u64(pg, buffer, data);
-  printf("element:\t0x%08X\n", *buffer);
+  long diff = max - index;
+  for (uint8_t i = 0; i < svcntd() && i <= diff; i++)
+  {
+    printf("element:\t0x%08X\n", buffer[i]);
+  }
 }
 
 #ifdef _PROTO_
@@ -222,7 +225,9 @@ LONG read_min(net)
   while (svptest_first(pg, pg))
   {
     svuint64_t result, akt_group;
-    svuint64_t _actArc = svdup_u64(3 * i - 1);
+    svuint64_t _actArc_i = svindex_u64(i, 1);
+    // 3 * i - 1
+    svuint64_t _actArc = svsub_n_u64_m(pg, svmul_n_u64_m(pg, _actArc_i, 3), 1);
     svuint64_t sv_arc_div_nr = svdiv_n_u64_m(pg, _actArc, net->nr_group);
     akt_group = svmul_n_u64_m(pg, sv_arc_div_nr, net->nr_group);
     akt_group = svsub_u64_m(pg, _actArc, akt_group);
@@ -245,8 +250,8 @@ LONG read_min(net)
     svuint64_t sv_cost = svadd_n_u64_z(pg, sv_arc, cost_offset),
                sv_org_cost = svadd_n_u64_z(pg, sv_arc, org_cost_offset);
     svint64_t max = svdup_n_s64((cost_t)((-2) * (MAX(net->bigM, (LONG)BIGM))));
-    svprint(pg, result);
-    // svst1_scatter_u64base_s64(pg, sv_cost, max);
+    // svprint(pg, i, net->n_trips, result);
+    svst1_scatter_u64base_s64(pg, sv_cost, max);
     // svst1_scatter_u64base_s64(pg, sv_org_cost, max);
     i += svcntd();
     pg = svwhilele_b64_s64(i, net->n_trips);
