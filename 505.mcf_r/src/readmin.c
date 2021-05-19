@@ -244,15 +244,16 @@ LONG read_min(net)
     svuint64_t sv_else = svmul_n_u64_m(pg_else, akt_group, net->max_elems);
     result = svadd_u64_m(pg_else, result, sv_else);
 
-    svuint64_t sv_arc = svadd_n_u64_m(pg, result, net->arcs);
-    uint64_t cost_offset = offsetof(arc_t, cost);
-    uint64_t org_cost_offset = offsetof(arc_t, org_cost);
+    char *p = net->arcs;
+    svuint64_t sv_arc = svadd_n_u64_m(pg, result, p);
+    uint64_t cost_offset = offsetof(struct arc, cost);
+    uint64_t org_cost_offset = offsetof(struct arc, org_cost);
     svuint64_t sv_cost = svadd_n_u64_z(pg, sv_arc, cost_offset),
                sv_org_cost = svadd_n_u64_z(pg, sv_arc, org_cost_offset);
     svint64_t max = svdup_n_s64((cost_t)((-2) * (MAX(net->bigM, (LONG)BIGM))));
     // svprint(pg, i, net->n_trips, result);
-    svst1_scatter_u64base_s64(pg, sv_cost, max);
-    // svst1_scatter_u64base_s64(pg, sv_org_cost, max);
+    svst1_scatter_u64base_offset_s64(pg, sv_arc, cost_offset, max);
+    svst1_scatter_u64base_offset_s64(pg, sv_arc, org_cost_offset, max);
     i += svcntd();
     pg = svwhilele_b64_s64(i, net->n_trips);
   }
