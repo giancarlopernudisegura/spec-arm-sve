@@ -244,8 +244,7 @@ LONG read_min(net)
     svuint64_t sv_else = svmul_n_u64_m(pg_else, akt_group, net->max_elems);
     result = svadd_u64_m(pg_else, result, sv_else);
 
-    char *p = net->arcs;
-    svuint64_t sv_arc = svadd_n_u64_m(pg, result, p);
+    svuint64_t sv_arc = svadd_n_u64_m(pg, result, net->arcs);
     uint64_t cost_offset = offsetof(struct arc, cost);
     uint64_t org_cost_offset = offsetof(struct arc, org_cost);
     svuint64_t sv_cost = svadd_n_u64_z(pg, sv_arc, cost_offset),
