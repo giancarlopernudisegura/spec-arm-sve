@@ -224,15 +224,17 @@ LONG read_min(net)
     svbool_t pg_if = svcmpgt_n_u64(pg, akt_group, net->full_groups);
     svbool_t pg_else = svnot_z(pg, pg_if);
     result = sv_arc_div_nr;
+    if (!svptest_any(pg, svnot_b_z(pg, pg_else))) {
+      svuint64_t sv_else = svmul_n_u64_m(pg, akt_group, net->max_elems);
+      result = svadd_u64_m(pg, result, sv_else);
+      goto latch;
+    }
     // pg_if
     svuint64_t sv_if = svsub_n_u64_m(pg_if, akt_group, net->full_groups);
     sv_if = svmad_n_u64_m(pg_if, sv_if,
       svdup_u64(net->max_elems - 1),
       net->full_groups * net->max_elems);
     result = svadd_u64_m(pg_if, result, sv_if);
-    if (!svptest_any(pg, pg_else)) {
-      goto latch;
-    }
     // pg_else
     svuint64_t sv_else = svmul_n_u64_m(pg_else, akt_group, net->max_elems);
     result = svadd_u64_m(pg_else, result, sv_else);

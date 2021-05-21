@@ -230,13 +230,9 @@ LONG read_min(net)
       svdup_u64(net->max_elems - 1),
       net->full_groups * net->max_elems);
     result = svadd_u64_m(pg_if, result, sv_if);
-    if (!svptest_any(pg, pg_else)) {
-      goto latch;
-    }
     // pg_else
     svuint64_t sv_else = svmul_n_u64_m(pg_else, akt_group, net->max_elems);
     result = svadd_u64_m(pg_else, result, sv_else);
-    latch:;
     result = svmul_n_u64_m(pg, result, sizeof(struct arc));
 
     unsigned long p = net->arcs;
