@@ -21,22 +21,6 @@ Copyright (c) 2006-2010 LBW.
 
 #include "readmin.h"
 
-__attribute__((always_inline)) inline void alc(svbool_t pg1, svbool_t p0, svbool_t p1, svuint64_t v0, svuint64_t v1, svuint64_t *idxM, svuint64_t *idxR)
-{
-  svuint64_t t0 = svcompact_u64(p0, v0);
-  svuint64_t t1 = svcompact_u64(p1, v1);
-  svbool_t n0 = svnot_b_z(svptrue_b64(), p0);
-  svuint64_t t2 = svcompact_u64(n0, v0);
-  svbool_t n1 = svnot_b_z(pg1, p1);
-  svuint64_t t3 = svcompact_u64(n1, v1);
-  svbool_t cntp1 = svwhilelt_b64_u64(0, svcntp_b64(pg1, p1));
-  svuint64_t t4 = svsplice_u64(cntp1, t1, t3);
-  svbool_t cntp0 = svwhilelt_b64_u64(0, svcntp_b64(svptrue_b64(), p0));
-  *idxM = svsplice_u64(cntp0, t0, t4);
-  svbool_t cntpnt0 = svwhilelt_b64_u64(0, svcntp_b64(svptrue_b64(), n0));
-  *idxR = svsel_u64(cntpnt0, t2, t4);
-}
-
 #ifdef _PROTO_
 LONG read_min(network_t *net)
 #else
