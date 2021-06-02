@@ -300,18 +300,9 @@ LONG read_min(net)
       svbool_t pgM              = svcmple_n_u64(svptrue_b64(), _actArcM_i, net->n_trips);
       svbool_t pgR              = svcmple_n_u64(svptrue_b64(), _actArcR_i, net->n_trips);
 
-      svbool_t pgM_if = svcmpgt_n_u64(pgM, akt_groupM, net->full_groups);
-      svbool_t pgM_else = svnot_z(pgM, pgM_if);
       svuint64_t resultM = sv_arc_div_nrM;
-      // pgM_if
-      // svuint64_t sv_ifM = svsub_n_u64_m(pgM_if, akt_groupM, net->full_groups);
-      // sv_ifM = svmad_n_u64_m(pgM_if, sv_ifM,
-      //   svdup_u64(net->max_elems - 1),
-      //   net->full_groups * net->max_elems);
-      // resultM = svadd_u64_m(pgM_if, resultM, sv_ifM);
-      // pgM_else
-      svuint64_t sv_elseM = svmul_n_u64_m(pgM_else, akt_groupM, net->max_elems);
-      resultM = svadd_u64_m(pgM_else, resultM, sv_elseM);
+      svuint64_t sv_elseM = svmul_n_u64_m(svptrue_b64(), akt_groupM, net->max_elems);
+      resultM = svadd_u64_m(svptrue_b64(), resultM, sv_elseM);
       resultM = svmul_n_u64_m(pgM, resultM, sizeof(struct arc));
 
       svuint64_t sv_arcM = svadd_n_u64_m(pgM, resultM, p);
@@ -340,7 +331,7 @@ LONG read_min(net)
       svst1_scatter_u64base_u64(pgR, sv_costR, max);
       svst1_scatter_u64base_u64(pgR, sv_org_costR, max);
 
-      goto LATCH;
+      goto LATCH1;
     }
 
     result1 = sv_arc_div_nr1;
@@ -379,7 +370,7 @@ LONG read_min(net)
     svst1_scatter_u64base_u64(pg2, sv_cost2, max);
     svst1_scatter_u64base_u64(pg2, sv_org_cost2, max);
 
-    LATCH:;
+    LATCH1:;
     i  += svcntd() * 2;
     pg1 = svwhilele_b64_s64(i, net->n_trips);
     pg2 = svwhilele_b64_s64(i + svcntd(), net->n_trips);
